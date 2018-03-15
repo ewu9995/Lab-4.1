@@ -23,8 +23,8 @@ public class Card {
 		return pointValue;
 	}
 	
-	public boolean equals(Card x, Card y) {
-		if(x.equals(y)) {
+	public boolean equals(Card otherCard) {
+		if(rank.equals(otherCard.rank) && suit.equals(otherCard.suit) && (pointValue == otherCard.pointValue)) {
 			return true;
 		}
 		return false;

@@ -13,22 +13,46 @@ public class Deck {
 		}
 	}
 	
-	public boolean isEmpty(ArrayList<Card> unDealt ) {
+	public boolean isEmpty() {
 		if(unDealt.size() == 0) {
 			return true;
 		}
 		return false;
 	}
 	
-	public int size(ArrayList<Card> Dealt ) {
+	public int size() {
 		return unDealt.size();
 		
 	}
 	
-	public ArrayList deal(ArrayList<Card> UnDealt) {
+	public Card deal() {
+	boolean dealt = false;
+	Card returnNull = null;
+	
+		if(!dealt) 
+		{
+			for(int i=0; i < unDealt.size(); i++)
+			{
+				dealt =true;
+				unDealt.remove(i);
+
+			}
+		}
 		
-		return UnDealt;
+		if(unDealt.size() == 0) 
+		{
+		returnNull= null;
+		}
+	
+		return returnNull;
 	}
+	
+	public void shuffle() {
+		for(int k=51; k < unDealt.size();  k--) {
+			unDealt.add();
+		}
+	}
+	
 	 
 	
 	
