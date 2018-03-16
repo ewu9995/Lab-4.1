@@ -26,34 +26,39 @@ public class Deck {
 	}
 	
 	public Card deal() {
-	boolean dealt = false;
-	Card returnNull = null;
-	
-		if(!dealt) 
+		int number =0;
+		for(int i= unDealt.size()-1; i >0; i--)
 		{
-			for(int i=0; i < unDealt.size(); i++)
-			{
-				dealt =true;
-				unDealt.remove(i);
-
-			}
+			unDealt.remove(i);                                                                                                                                                                                             
+			
+			if(unDealt.size() !=0) {
+			return Dealt
+		}
 		}
 		
 		if(unDealt.size() == 0) 
 		{
-		returnNull= null;
+			return null;
 		}
-	
-		return returnNull;
+
+		
 	}
-	
+
 	public void shuffle() {
-		for(int k=51; k < unDealt.size();  k--) {
-			unDealt.add();
+	
+		for(int k=51; k < unDealt.size()-1;  k++) {
+			int randomInteger = (int)(Math.random() * k + 1);
+			k = randomInteger;
+			for(int r=0; r < unDealt.size()-1;  r++) {
+				Card temp = unDealt.get(k);
+				k = unDealt.set(r);
+				
+			}
 		}
+		
 	}
 	
-	 
+	   
 	
 	
 	
