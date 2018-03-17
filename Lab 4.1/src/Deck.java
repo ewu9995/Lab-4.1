@@ -24,20 +24,18 @@ public class Deck {
 		return unDealt.size();
 	}
 	
-	public ArrayList<Card> deal() {
-		
+	public Card deal() {
+		 
 		if(unDealt.size() == 0) 
 		{
 			return null;
 		}
-		
-		else if(unDealt.size() != 0) 
-		{
-			unDealt.remove(0);
-			Dealt.add(0, null);
+		else {
+			
 		}
+		
+		
 	
-		return Dealt;
 	}
 
 	public void shuffle() {
@@ -48,9 +46,10 @@ public class Deck {
 			k = randomInteger;
 			Card temp = unDealt.get(k);
 			Card temp1 = unDealt.get(j);
+			if(k >j) {
 			unDealt.set(k, temp1);
 			unDealt.set(j, temp);
-				
+			}	
 			}
 		}
 		
