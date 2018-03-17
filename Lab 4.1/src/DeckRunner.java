@@ -1,6 +1,13 @@
 
 public class DeckRunner {
 	public static void main(String[] args){
-		Card card = new Card(null, null, 0);
+		String suits[] = {"Spades", "Hearts", "Diamonds", "Clubs"};
+		String ranks[] = {"Ace", "Jack", "King", "Queen", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
+		int pointValue [] = {2,3,4,5,6,7,8,9,10,11,12,13,14}; 
+		
+		Deck cardDeck = new Deck(ranks,suits,pointValue);
+		cardDeck.shuffle();
+		System.out.print(cardDeck.deal());
+		
 	}
 }

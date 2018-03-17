@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 public class Deck {
  
-	ArrayList<Card> unDealt;
-	ArrayList<Card> Dealt;
+	ArrayList<Card> unDealt = new ArrayList<Card>();
+	ArrayList<Card> Dealt = new ArrayList<Card>();
 	
 	public Deck(String[] ranks, String[] suits, int[] value) {
 		for(int i=0; i<ranks.length; i++) {
@@ -22,45 +22,40 @@ public class Deck {
 	
 	public int size() {
 		return unDealt.size();
-		
 	}
 	
-	public Card deal() {
-		int number =0;
-		for(int i= unDealt.size()-1; i >0; i--)
-		{
-			unDealt.remove(i);                                                                                                                                                                                             
-			
-			if(unDealt.size() !=0) {
-			return Dealt
-		}
-		}
+	public ArrayList<Card> deal() {
 		
 		if(unDealt.size() == 0) 
 		{
 			return null;
 		}
-
 		
+		else if(unDealt.size() != 0) 
+		{
+			unDealt.remove(0);
+			Dealt.add(0, null);
+		}
+	
+		return Dealt;
 	}
 
 	public void shuffle() {
 	
-		for(int k=51; k < unDealt.size()-1;  k++) {
+		for(int k=51; k > 0;  k--) {
+			for(int j=0; j < unDealt.size()-1;  j++) {
 			int randomInteger = (int)(Math.random() * k + 1);
 			k = randomInteger;
-			for(int r=0; r < unDealt.size()-1;  r++) {
-				Card temp = unDealt.get(k);
-				k = unDealt.set(r);
+			Card temp = unDealt.get(k);
+			Card temp1 = unDealt.get(j);
+			unDealt.set(k, temp1);
+			unDealt.set(j, temp);
 				
 			}
 		}
 		
 	}
+}
 	
 	   
 	
-	
-	
-	
-}

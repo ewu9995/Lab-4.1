@@ -24,14 +24,14 @@ public class Card {
 	}
 	
 	public boolean equals(Card otherCard) {
-		if(rank.equals(otherCard.rank) && suit.equals(otherCard.suit) && (pointValue == otherCard.pointValue)) {
+		if(this.rank.equals(otherCard.rank) && this.suit.equals(otherCard.suit) && (this.pointValue == otherCard.pointValue)) {
 			return true;
 		}
 		return false;
 	}
 	
 	public String toString() {
-		return rank+suit+pointValue;
+		return rank+" " +suit+ " " + pointValue;
 		
 	}
 }
