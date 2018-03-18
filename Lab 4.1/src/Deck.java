@@ -39,9 +39,9 @@ public class Deck {
 		}
 		else 
 		{
-			unDealt.remove(0);
 			Dealt.add(unDealt.get(0));
-			return(unDealt.remove(0));
+			unDealt.remove(0);
+			return(unDealt.get(0));
 		}
 	
 	}
