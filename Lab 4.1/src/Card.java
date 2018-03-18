@@ -1,4 +1,10 @@
 
+/*
+* Evan Wu
+* Lab 4.1
+* AP CSA Period 2
+*/
+
 public class Card {
   
 	String rank;
@@ -31,7 +37,7 @@ public class Card {
 	}
 	
 	public String toString() {
-		return rank+" " +suit+ " " + pointValue;
+		return rank+" " + suit + " " + pointValue;
 		
 	}
 }

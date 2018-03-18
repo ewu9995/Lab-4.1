@@ -1,5 +1,12 @@
 import java.util.ArrayList;
 
+
+/*
+* Evan Wu
+* Lab 4.1
+* AP CSA Period 2
+*/
+
 public class Deck {
  
 	ArrayList<Card> unDealt = new ArrayList<Card>();
@@ -30,29 +37,24 @@ public class Deck {
 		{
 			return null;
 		}
-		else {
-			
+		else 
+		{
+			unDealt.remove(0);
+			Dealt.add(unDealt.get(0));
+			return(unDealt.remove(0));
 		}
-		
-		
 	
 	}
 
 	public void shuffle() {
 	
 		for(int k=51; k > 0;  k--) {
-			for(int j=0; j < unDealt.size()-1;  j++) {
-			int randomInteger = (int)(Math.random() * k + 1);
-			k = randomInteger;
+			int r = (int)(Math.random() * k + 1);
 			Card temp = unDealt.get(k);
-			Card temp1 = unDealt.get(j);
-			if(k >j) {
+			Card temp1 = unDealt.get(r);
 			unDealt.set(k, temp1);
-			unDealt.set(j, temp);
-			}	
-			}
-		}
-		
+			unDealt.set(r, temp);
+			}			
 	}
 }
 	
