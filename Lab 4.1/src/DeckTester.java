@@ -4,7 +4,7 @@
  * AP CSA Period 2
  */
 
-public class DeckRunner {
+public class DeckTester {
 	public static void main(String[] args){
 		String suits[] = {"Spades", "Hearts", "Diamonds", "Clubs"};
 		String ranks[] = {"Ace", "Jack", "King", "Queen", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
