@@ -47,6 +47,11 @@ public class Deck {
 	}
 
 	public void shuffle() {
+		
+		for(int i=0; i< Dealt.size(); i++) {
+			unDealt.add(Dealt.get(i));
+			Dealt.remove(i);
+		}
 	
 		for(int k=51; k > 0;  k--) {
 			int r = (int)(Math.random() * k + 1);
