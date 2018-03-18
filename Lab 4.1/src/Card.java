@@ -30,7 +30,7 @@ public class Card {
 	}
 	
 	public boolean equals(Card otherCard) {
-		if(this.pointValue == otherCard.pointValue) {
+		if(pointValue == otherCard.pointValue) {
 			return true;
 		}
 		return false;
